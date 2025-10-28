@@ -13,6 +13,14 @@ Règles supplémentaires :
 - Lors de modifications de fichiers, indique clairement le fichier modifié et explique brièvement le changement (dans les commits ou messages d'édition).
 - Respecte les conventions du projet : lis d'abord les fichiers pertinents avant d'éditer, ajoute des tests quand c'est pertinent, et exécute des vérifications de base si le dépôt contient des outils d'analyse.
 
+Principes d'architecture et de style :
+- Ce projet applique les principes de Clean Code et Domain-Driven Design (DDD).
+- Favorise un langage omniprésent (ubiquitous language) : nomme les classes et méthodes avec le vocabulaire du domaine.
+- Sépare clairement les couches : Domain (entities, value objects, repositories interfaces), Application (use cases), Infrastructure (implementations), Presentation (controllers, routing).
+- Préfère les objets du domaine (Entity, ValueObject, Aggregate) pour la logique métier et place les règles dans le domaine plutôt que dans les controllers.
+- Les UseCases / Services applicatifs orchestrent les interactions entre les repositories et le domaine.
+- Ajoute des tests unitaires pour la logique du domaine et des tests d'intégration pour vérifier les interactions entre couches.
+
 Règles de nommage (pratiques et exemples) :
 - Langue : tous les identifiants (classes, variables, fonctions, interfaces, constantes) doivent être en English.
 - Classes / Interfaces : PascalCase. Les interfaces se terminent par "Interface".
