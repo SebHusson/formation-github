@@ -30,4 +30,19 @@ Règles de nommage (pratiques et exemples) :
 - Repositories : suffixez par "Repository" ou "RepositoryInterface" selon le cas.
   - Exemple : TimeRepository, TimeRepositoryInterface
 
+Workflow de commit (Conventional Commits) :
+- Tous les messages de commit doivent suivre le format Conventional Commits.
+- Le type et la description doivent être en anglais.
+- Types courants à utiliser dans ce dépôt :
+  - feature => feat: <description en anglais>
+    - Exemple : feat: add GameSession entity
+  - technique => chore: <description en anglais>
+    - Exemple : chore: update copilot instructions
+  - fix => fix: <description en anglais>
+    - Exemple : fix: correct timezone handling in TimeRepository
+  - docs => docs: <description en anglais>
+    - Exemple : docs: update README with game conventions
+- Si le commit est destiné à une refactorisation ou amélioration technique sans nouvelle fonctionnalité visible, utilisez chore: ou refactor: selon le cas.
+- Pour les commits breaking change, suivez la syntaxe Conventional Commits et ajoutez une section BREAKING CHANGE: dans le corps du message.
+
 Note : ce fichier sert uniquement à guider l'agent Copilot dans ses interactions avec les contributeurs. Il n'est pas destiné à être interprété par des outils automatisés.
