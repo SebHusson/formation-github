@@ -1,6 +1,8 @@
 <?php
 
-namespace Application\Domain\Entity;
+declare(strict_types=1);
+
+namespace App\Domain\Entity;
 
 // Represents a game session
 class GameSession
@@ -79,4 +81,3 @@ class GameSession
         $this->status = $status;
     }
 }
-
