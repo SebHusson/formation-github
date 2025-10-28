@@ -50,7 +50,25 @@ Workflow de commit (Conventional Commits) :
     - Exemple : fix: correct timezone handling in TimeRepository
   - docs => docs: <description en anglais>
     - Exemple : docs: update README with game conventions
-- Si le commit est destiné à une refactorisation ou amélioration technique sans nouvelle fonctionnalité visible, utilisez chore: ou refactor: selon le cas.
+- Si le commit est destiné à une factorisation ou amélioration technique sans nouvelle fonctionnalité visible, utilisez chore: ou refactor: selon le cas.
 - Pour les commits breaking change, suivez la syntaxe Conventional Commits et ajoutez une section BREAKING CHANGE: dans le corps du message.
 
+Le developpement tourne dans le conteneur Docker "formation-github".
+Il faut donc rentrer dans le conteneur "formation-github" puis copier dans
+ce conteneur mon fichier de config git local pour utiliser mon compte.
+il faut lancer ça avant d'exécuter des commandes liées au code (installations, tests, exécutions, etc.).
+
+Un répertoire ".docker" est créé à la racine du projet pour contenir les fichiers liés à Docker (Dockerfile, docker-compose.yml, scripts d'aide, etc.).
+
+
+Worflow de developpement :
+- Me demander confirmation avant chacune des étapes qui suivent. 
+- Avant toute modification sur le code, créer une branche dédiée avec un nom descriptif en anglais.
+- Copilot doit générer tout le code pour répondre aux besoins exprimés et couvrir les cas de tests associés.
+- Avant toute confirmation de fin de branche, copilot doit s'assurer de la validation des tests unitaires ainsi que la bonne application des règles de nommage et des principes d'architecture du projet.
+
 Note : ce fichier sert uniquement à guider l'agent Copilot dans ses interactions avec les contributeurs. Il n'est pas destiné à être interprété par des outils automatisés.
+
+workflow de CI/CD :
+- Le pipeline CI/CD doit s'exécuter à chaque push sur une branche.
+- 
